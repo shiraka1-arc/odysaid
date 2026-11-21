@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f4f6f9 0%, #e6ecf5 50%, #f7f5f0 100%);
+  color: #1e293b;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Animasi Ikon Santai di Background */
+.bg-icons span {
+  position: fixed;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  animation: floatUp 8s infinite ease-in-out;
+  pointer-events: none;
+}
+.bg-icons span:nth-child(1) { left: 10%; top: 80%; animation-delay: 0s; }
+.bg-icons span:nth-child(2) { left: 85%; top: 75%; animation-delay: 1.5s; }
+.bg-icons span:nth-child(3) { left: 18%; top: 20%; animation-delay: 3s; }
+.bg-icons span:nth-child(4) { left: 78%; top: 22%; animation-delay: 4.5s; }
+.bg-icons span:nth-child(5) { left: 50%; top: 86%; animation-delay: 2s; }
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(8deg); }
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card.active {
+  display: block;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.94) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 4px;
+}
+
+.main-icon {
+  font-size: 3.4rem;
+  margin-bottom: 12px;
+  animation: bounce 2.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.message-box {
+  background: #f8fafc;
+  border-left: 4px solid #4f46e5;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  text-align: left;
+  color: #334155;
+  margin-bottom: 24px;
+}
+
+.question {
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 54px;
+}
+
+.btn {
+  border: none;
+  border-radius: 14px;
+  padding: 13px 20px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: #1e293b;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(30, 41, 59, 0.2);
+}
+
+.btn-primary:hover {
+  background: #0f172a;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #10b981;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.25);
+  z-index: 2;
+}
+
+.btn-danger {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  position: relative;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hint-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-top: 14px;
+  min-height: 18px;
+}
+
+/* Styling Kartu Kompensasi */
+.voucher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.voucher-item {
+  border: 2px dashed #cbd5e1;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voucher-item:hover {
+  border-color: #6366f1;
+}
+
+.voucher-item.selected {
+  background: #eef2ff;
+  border: 2px solid #4f46e5;
+  color: #312e81;
+  transform: scale(1.02);
+}
+
+.full-width {
+  width: 100%;
+}

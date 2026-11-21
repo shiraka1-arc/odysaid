@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surat Klarifikasi Resmi 🏳️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-icons" aria-hidden="true">
+    <span>🏳️</span><span>☕</span><span>🙏</span><span>✨</span><span>🩹</span>
+  </div>
+
+  <main class="container">
+    <!-- HALAMAN 1: PEMBUKA -->
+    <section id="screen-intro" class="card active">
+      <div class="badge">URGENT // BENDERA PUTIH</div>
+      <div class="main-icon">🏳️</div>
+      <h1>Hai, <span class="target-name">Kamu</span> 👋</h1>
+      <p class="subtitle">
+        Jangan di-close dulu plis. Aku bikin halaman singkat ini khusus buat klarifikasi biar kamu nggak ngambek lagi.
+      </p>
+      <button id="btn-open" class="btn btn-primary">Baca Klarifikasi 📄</button>
+    </section>
+
+    <!-- HALAMAN 2: ISI PERMINTAAN MAAF -->
+    <section id="screen-apology" class="card">
+      <div class="tag">Permohonan Maaf Resmi</div>
+      <h2>Aku Minta Maaf Ya 🙏</h2>
+      <p id="apology-text" class="message-box">
+        <!-- Teks otomatis diisi dari script.js -->
+      </p>
+
+      <div class="question-box">
+        <p class="question">Gimana, udah baikan belum?</p>
+        <div class="btn-group">
+          <button id="btn-yes" class="btn btn-success">Oke, dimaafin 🤝</button>
+          <button id="btn-no" class="btn btn-danger">ga dimaafin 😤</button>
+        </div>
+        <p id="dodge-hint" class="hint-text"></p>
+      </div>
+    </section>
+
+    <!-- HALAMAN 3: KOMPENSASI KETEMU BESOK -->
+    <section id="screen-accepted" class="card">
+      <div class="main-icon">🙌✨</div>
+      <h2>Mantap! Makasih <span class="target-name">Kamu</span>!</h2>
+      <p class="subtitle">
+        Biar resmi damai, pilih satu kompensasi di bawah ini buat besok pas kita ketemu:
+      </p>
+
+      <div id="voucher-container" class="voucher-list">
+        <!-- Daftar kompensasi otomatis diisi dari script.js -->
+      </div>
+
+      <button id="btn-wa" class="btn btn-primary full-width">
+        Klaim ke WhatsApp Aku 💬
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
