@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surat Klarifikasi Resmi 🙇‍♂️</title>
+  <title>Surat Klarifikasi Resmi 🙏</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,19 +11,25 @@
 </head>
 <body>
   <div class="bg-icons" aria-hidden="true">
-    <span>🏳️</span><span>☕</span><span>🙏</span><span>✨</span><span>🩹</span>
+    <span>🙏</span><span>☕</span><span>✨</span><span>🙌</span><span>💬</span>
   </div>
 
   <main class="container">
     <!-- HALAMAN 1: PEMBUKA -->
     <section id="screen-intro" class="card active">
       <div class="badge">URGENT // BENDERA PUTIH</div>
-      <div class="main-icon">🏳️</div>
+      <div class="main-icon" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;">
+          <rect x="16" y="10" width="4" height="44" rx="2" fill="#64748B"/>
+          <path d="M20 13C27 10 35 16 44 13C46.5 12.2 48 13.5 48 15.5V33.5C48 35 46.8 36 45 36.5C36 39 28 33 20 36V13Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="18" cy="10" r="3.5" fill="#4F46E5"/>
+        </svg>
+      </div>
       <h1>Hai, <span class="target-name">Kamu</span> 👋</h1>
       <p class="subtitle">
         Jangan di-close dulu plis. Aku bikin halaman singkat ini khusus buat klarifikasi biar kamu nggak ngambek lagi.
       </p>
-      <button id="btn-open" class="btn btn-primary">Baca Klarifikasi 📄</button>
+      <button id="btn-open" class="btn btn-primary">Baca Klarifikasi ✨</button>
     </section>
 
     <!-- HALAMAN 2: ISI PERMINTAAN MAAF -->
@@ -38,7 +44,7 @@
         <p class="question">Gimana, udah baikan belum?</p>
         <div class="btn-group">
           <button id="btn-yes" class="btn btn-success">Oke, dimaafin 🤝</button>
-          <button id="btn-no" class="btn btn-danger">ga dimaafin 😤</button>
+          <button id="btn-no" class="btn btn-danger">Masih ngambek 😤</button>
         </div>
         <p id="dodge-hint" class="hint-text"></p>
       </div>
